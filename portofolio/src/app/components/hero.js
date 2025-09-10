@@ -11,7 +11,7 @@ function Hero() {
           Hi, I am Diella Veliu !
           </h1>
 
-          <p className="type font-mono mb-4 text-lg text-text md:pr-16 xl:pr-28">
+          <p className="type font-mono mb-4 text-lg text-text md:pr-16 xl:pr-28 text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
             I&apos;m Lily Smith, a passionate web developer based in USA. Here,
             you&apos;ll get a glimpse of my journey in the world of web
             development, where creativity meets functionality.
