@@ -5,8 +5,12 @@ function Contact() {
   
   return (
    <header className="p-8">
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center lg:grid-cols-2">
+      <div className="container flex flex-col align-middle justify-center w-full">
        <h1>Contact</h1>
+       <h4>Email: diellaveliu@gmail.com</h4>
+       <h4>Instagram: diellaveliu</h4>
+       <h4>LinkedIn: linkd/diellaveliu</h4>
+       <h4>GitHub: diellav</h4>
         </div>
     </header>
   );

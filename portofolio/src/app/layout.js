@@ -1,14 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Exo_2, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const exo2 = Exo_2({
+  variable: "--font-exo2",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -19,12 +18,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en"  className={`${exo2.variable} ${robotoMono.variable}`}>
       <body
       >
         <Navbar></Navbar>
         {children}
-        <Footer></Footer>
       </body>
     </html>
   );

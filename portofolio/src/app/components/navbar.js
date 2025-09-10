@@ -10,12 +10,15 @@ const NAV_MENU = [
   { name: "Contact", href: "#contact" },
 ];
 
-function NavItem({ name, href }) {
+function NavItem({ name, href , scrolled}) {
   return (
     <li>
       <a
         href={href || "#"}
-        className="text-gray-700 hover:text-purple-500 font-medium block py-2"
+        className={`font-medium block py-2 ${
+          scrolled? "text-purple-100 font-bold hover:text-purple-300"
+    :"text-purple-400 hover:text-purple-100"
+  }`}
       >
         {name}
       </a>
@@ -55,22 +58,21 @@ export default function Navbar() {
 
   return (
     <MTNavbar shadow={false} fullWidth className={`sticky top-0 z-50 transition-colors duration-300 ${
-    scrolled ? "bg-purple-500" : "bg-transparent"
+    scrolled ? "bg-purple-600/10 backdrop-blur-md shadow-md" : "bg-transparent"
   }`}>
-      <div className="container mx-auto flex items-center justify-between py-3 px-4 ">
-        <a href="#" className="text-lg font-bold text-blue-gray-900">
-          Diella's Portofolio
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+        <a href="#" className="font-futuristic text-3xl font-bold text-purple-400">
+          DiellaVeliu.
         </a>
 
-        <ul className="hidden lg:flex gap-8">
+        <ul className="font-mono hidden lg:flex gap-8 text-word">
           {NAV_MENU.map((item) => (
-            <NavItem key={item.name} name={item.name} href={item.href} />
+            <NavItem key={item.name} name={item.name} href={item.href} scrolled={scrolled}  />
           ))}
         </ul>
 
         <IconButton
           variant="text"
-          color="gray"
           onClick={handleOpen}
           className="lg:hidden"
         >
@@ -80,9 +82,9 @@ export default function Navbar() {
 
      {open && (
   <Collapse className="lg:hidden">
-    <ul className="flex flex-col gap-2 px-4 pb-4 bg-auto">
+    <ul className="flex flex-col gap-2 px-4 pb-4 bg-auto text-mini">
       {NAV_MENU.map((item) => (
-        <NavItem key={item.name} name={item.name} href={item.href} />
+        <NavItem key={item.name} name={item.name} href={item.href}  scrolled={scrolled} />
       ))}
     </ul>
   </Collapse>

@@ -6,7 +6,7 @@ import Hero from "@/app/components/hero";
 import Projects from "@/app/pages/projects";
 import About from "@/app/pages/about";
 import Contact from "@/app/pages/contact";
-
+import CV from "@/app/components/cv";
 import './globals.css'
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <Hero></Hero></div>
            <div id="about">
       <About></About></div>
+      <CV></CV>
       <div id="projects">
       <Projects></Projects></div>
          <div id="contact">

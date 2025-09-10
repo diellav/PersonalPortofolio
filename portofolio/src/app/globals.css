@@ -3,29 +3,87 @@
 @tailwind utilities;
 
 :root {
-  --background: #9e4949;
+  --background: #111c37;
   --foreground: #171717;
+  --color-text: #9bb8c1;
+  --color-accent: var(--color-purple-400) ;
+  --color-word:#4361ee;
+  --color-pink:#f72585;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-futuristic: var(--font-exo2);
+  --font-mono: var(--font-roboto-mono);
+  
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #d77e7e;
+    --foreground:#111c37;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 html {
   scroll-behavior: smooth;
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-text{
+  color: var(--color-text);
+}
+.text-word{
+  color: var(--color-word);
+}
+.pink-custom{
+  color: var(--color-pink);
+}
+.typewriter{
+  display: flex;
+   flex-direction: column;
+  align-items: center; 
+}
+.typewriter h1{
+  overflow: hidden;
+  white-space: nowrap;
+  border-right:1px solid;
+  animation:typing 2s steps(60, end) forwards,
+  blink 0.5s step-end infinite;
+}
+@keyframes typing {
+  from{
+    width:0;
+  }
+  to{
+    width:100%;
+  }
+}
+@keyframes blink {
+  0%, 80%{border-color: gray;}
+}
+
+.typewriter p{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 1s forwards;
+  animation-delay: 2s;
+}
+@keyframes slideIn {
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 780px) {
+  .custom-img {
+    width: 18rem; 
+    height: 20rem;
+  }
 }
