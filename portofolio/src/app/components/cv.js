@@ -24,7 +24,7 @@ export default function CV() {
 </div>
 
     <div>
-      <button type="button" className="btn"onClick={()=>window.open('/DiellaVeliuCV.pdf','_blank')}>
+      <button type="button" className="btn shadow-[0_0_15px_rgba(255,0,240,0.5)]"onClick={()=>window.open('/DiellaVeliuCV.pdf','_blank')}>
       <strong>MY CV</strong>
       <div id="container-stars">
         <div id="stars"></div>

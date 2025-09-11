@@ -16,9 +16,9 @@ export default function Home() {
            <div id="about" className="px-8 mt-20 scroll-mt-24">
       <About></About></div>
       <CV></CV>
-      <div id="projects">
+      <div id="projects" className="px-8 mt-20 scroll-mt-24">
       <Projects></Projects></div>
-         <div id="contact">
+         <div id="contact" className="px-8 mt-20 scroll-mt-24">
       <Contact></Contact></div>
     </div>
    

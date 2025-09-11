@@ -30,11 +30,18 @@ function Contact() {
           <h1 className="font-futuristic text-accent mb-4 text-3xl font-bold lg:text-4xl">
             Contact Me
           </h1>
-
-          <h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">Email: diellaveliu@gmail.com</h4>
-          <h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">Instagram: diellaveliu</h4>
-          <h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">LinkedIn: linkd/diellaveliu</h4>
-          <h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">GitHub: diellav</h4>
+<h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
+            Email:{" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=diellaveliu@gmail.com"
+              className="hover:underline"   
+               target="_blank"
+               rel="noopener noreferrer">
+              diellaveliu@gmail.com</a></h4>
+          <h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">LinkedIn: {" "}<a  href="https://linkedin.com/in/diella-veliu"
+              className="hover:underline"  target="_blank"   rel="noopener noreferrer">linkedin.com/in/diella-veliu</a></h4>
+ <h4 className="text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">Github: {" "}<a  href="https://github.com/diellav"
+              className="hover:underline"  target="_blank"   rel="noopener noreferrer">diellav</a></h4>
         </div>
 
 
