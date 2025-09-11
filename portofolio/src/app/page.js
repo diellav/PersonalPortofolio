@@ -11,9 +11,9 @@ import './globals.css'
 export default function Home() {
   return (
     <div>
-      <div id="home">
+      <div id="home" className="scroll-mt-24">
       <Hero></Hero></div>
-           <div id="about">
+           <div id="about" className="px-8 mt-20 scroll-mt-24">
       <About></About></div>
       <CV></CV>
       <div id="projects">

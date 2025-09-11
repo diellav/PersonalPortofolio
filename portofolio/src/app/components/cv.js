@@ -3,10 +3,10 @@ import React from "react";
 export default function CV() {
   return (
 <>
-<div className="bg-gradient-to-b from-[#111c37] via-[#283069]  to-[#000000]
+<div className="bg-gradient-to-b from-[#111c37] via-[#313a80] to-[#111c37] 
   flex justify-around w-full h-100 items-center mt-30">
 <div className="content">
-   <div className="planet">
+   <div className="planet ">
       <div className="ring"></div>
          <div className="cover-ring"></div>
       <div className="spots">
@@ -24,7 +24,7 @@ export default function CV() {
 </div>
 
     <div>
-      <button type="button" className="btn">
+      <button type="button" className="btn"onClick={()=>window.open('/DiellaVeliuCV.pdf','_blank')}>
       <strong>MY CV</strong>
       <div id="container-stars">
         <div id="stars"></div>

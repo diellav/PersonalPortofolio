@@ -305,9 +305,75 @@ html {
 }
 
 
+@media (max-width: 680px) {
+  .content {
+    width: 200px; 
+    height: 200px;
+  }
+  
+.content .planet .ring {
+  width: 200px;
+  height: 200px;
+}
+.content .planet .ring:before {
+  width: 5px;
+  height: 20px;
+}
+
+.content .planet .ring:after {
+  width: 160px;
+  height: 160px;
+}
+
+.content .planet .spots span {
+  width: 10px;
+  height: 10px;
+}
+
+.content .planet .spots span:nth-child(3) {
+  width: 15px;
+  height: 15px;
+}
+
+.content .planet .spots span:nth-child(4) {
+  width: 20px;
+  height: 20px;
+}
+
+.content .planet .spots span:nth-child(5) {
+  top: 110px;
+  left: 50px;
+  width: 15px;
+  height: 15px;
+}
+
+.content .planet .spots span:nth-child(6) {
+  top: 120px;
+}
+
+.content .planet .spots span:nth-child(7) {
+  top: 30px;
+  left: 120px;
+  width: 15px;
+  height: 15px;
+}
+
+.content p {
+  bottom: -50px;
+}
 
 
+@keyframes ring {
+  0% {
+    transform: rotateX(110deg) rotateZ(0deg) translate(-30px, 5px);
+  }
 
+  100% {
+    transform: rotateX(110deg) rotateZ(360deg) translate(-30px, 5px);
+  }
+}
+
+}
 
 /* From Uiverse.io by StealthWorm */ 
 .btn {
@@ -334,6 +400,12 @@ html {
     );
   background-origin: border-box;
   background-clip: content-box, border-box;
+}
+
+@media (max-width:675px) {
+  .btn{
+      width: 8rem;
+  }
 }
 
 #container-stars {
@@ -505,7 +577,7 @@ strong {
   position: relative;
 }
 .color {
-  background-color: #3395ff;
+  background-color: #5b1b80;
 }
 
 .l1 {
@@ -633,7 +705,7 @@ strong {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 900;
   font-size: 18px;
-  color: #3395ff;
+  color: #ff33f5;
 }
 .e4 {
   width: 1px;
@@ -657,7 +729,7 @@ strong {
   right: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 32px;
-  color: #3395ff;
+  color:#ff33f5;
 }
 .e7 {
   width: 1px;
