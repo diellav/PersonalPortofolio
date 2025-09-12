@@ -59,8 +59,8 @@ export function About() {
         <h2 className="font-futuristic mb-4 text-4xl font-bold text-accent">
           About Me
         </h2>
-        <p className="font-mono mx-auto w-full text-text  text-shadow-[0_0_10px_rgba(0,120,255,0.5)] lg:w-10/12">
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        <p className="font-mono leading-loose mx-auto w-full text-text text-shadow-[0_0_10px_rgba(0,120,255,0.5)] lg:w-10/12">
+         I am a computer science and engineering student based in Prishtina , exploring web development and software engineering. constantly learning and experimenting with web development and software engineering. I love turning ideas into reality, building things that are not only functional but also enjoyable to use. I’m always curious, always learning, and excited to learn new technologies and follow in the latest trends.
         </p>
         <br></br>
         <br></br>

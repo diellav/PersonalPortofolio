@@ -18,7 +18,7 @@ export default function Home() {
       <CV></CV>
       <div id="projects" className="px-8 mt-20 scroll-mt-24">
       <Projects></Projects></div>
-         <div id="contact" className="px-8 mt-20 scroll-mt-24">
+         <div id="contact" className="px-8 mt-20 scroll-mt-4">
       <Contact></Contact></div>
     </div>
    

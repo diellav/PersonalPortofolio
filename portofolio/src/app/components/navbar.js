@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Navbar as MTNavbar, Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const NAV_MENU = [
@@ -10,12 +9,13 @@ const NAV_MENU = [
   { name: "Contact", href: "#contact" },
 ];
 
-function NavItem({ name, href , scrolled}) {
+function NavItem({ name, href, scrolled, onClick }) {
   return (
     <li>
       <a
         href={href || "#"}
-        className={`font-medium block py-2 ${
+         onClick={onClick}
+        className={`block py-2 px-4 font-medium ${
           scrolled? "text-purple-100 font-bold hover:text-purple-300"
     :"text-purple-400 hover:text-purple-100"
   }`}
@@ -30,9 +30,8 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const handleOpen = () => setOpen((cur) => !cur);
-
-  useEffect(() => {
+  const toggleOpen = () => setOpen((cur) => !cur);
+   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) setOpen(false);
     };
@@ -55,40 +54,45 @@ export default function Navbar() {
   };
 }, []);
 
-
   return (
-    <MTNavbar shadow={false} fullWidth className={`sticky top-0 z-50 transition-colors duration-300 ${
-    scrolled ? "bg-purple-600/10 backdrop-blur-md shadow-md" : "bg-transparent"
-  }`}>
+    <nav
+      className={`w-full sticky top-0 left-0 z-[9999] transition-colors duration-300 ${
+        scrolled ? "bg-purple-600/10 backdrop-blur-md shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <a href="#" className="font-futuristic text-3xl font-bold text-purple-400">
+        <a href="#home" className={`text-3xl font-bold text-purple-400 font-futuristic  ${
+        scrolled ? "visible" : "invisible"
+      }`}
+         onClick={()=>setOpen(false)}>
           DiellaVeliu.
         </a>
 
-        <ul className="font-mono hidden lg:flex gap-8 text-word">
+       
+        <ul className="hidden lg:flex gap-8 font-mono">
           {NAV_MENU.map((item) => (
-            <NavItem key={item.name} name={item.name} href={item.href} scrolled={scrolled}  />
+            <NavItem key={item.name} name={item.name} href={item.href} scrolled={scrolled}/>
           ))}
         </ul>
 
-        <IconButton
-          variant="text"
-          onClick={handleOpen}
-          className="lg:hidden"
+        <button
+          onClick={toggleOpen}
+          className="lg:hidden p-2 rounded-md text-white focus:outline-none "
         >
           {open ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
-        </IconButton>
+        </button>
       </div>
 
-     {open && (
-  <Collapse className="lg:hidden">
-    <ul className="flex flex-col gap-2 px-4 pb-4 bg-auto text-mini">
-      {NAV_MENU.map((item) => (
-        <NavItem key={item.name} name={item.name} href={item.href}  scrolled={scrolled} />
-      ))}
-    </ul>
-  </Collapse>
-)}
-    </MTNavbar>
+      {open && (
+        <div className="lg:hidden bg-purple-600/20 backdrop-blur-md shadow-md font-mono">
+          <ul className="flex flex-col gap-2 px-4 py-4">
+            {NAV_MENU.map((item) => (
+              <NavItem key={item.name} name={item.name} href={item.href} scrolled={scrolled} 
+         onClick={()=>setOpen(false)}/>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 }
