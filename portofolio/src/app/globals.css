@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #111c37;
-  --foreground: #171717;
+  --background: #0b1428;
+  --foreground: #111c37;
   --color-text: #9bb8c1;
   --color-accent: var(--color-purple-400) ;
   --color-word:#4361ee;
@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0b1428;
     --foreground:#111c37;
   }
 }
@@ -240,7 +240,15 @@ html {
   width: 40px;
   height: 40px;
 }
-
+.gradient-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
 .content .planet .spots span:nth-child(5) {
   top: 160px;
   left: 70px;

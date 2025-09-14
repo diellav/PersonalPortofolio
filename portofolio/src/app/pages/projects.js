@@ -11,8 +11,20 @@ const projects = [
     description: "Full-stack fashion e-commerce website built during my internship using React.js and PHP Laravel. Features include product browsing, filtering, cart & wishlist, secure Stripe payments, user profiles, and an admin dashboard. Fully database-driven with a smooth and exceptional user experience.",
     image: "/images/urbangaze.png",
     github: "https://github.com/diellav/FashionWebsite",
-    demo: "/images/UrbanGaze.mp4",
-    screenshots: ["/images/Screenshot 2025-08-11 082327.png", "/images/urbangaze.png", "/images/Screenshot 2025-08-11 082327.png"],
+    techStack: ["React", "Laravel", "Stripe", "PHP", "MySQL"],
+     screenshots: [
+      { src: "/images/urbangaze.png", description: "Home Page" },{ src: "/images/homepage2.png", description: "Details" },
+      { src: "/images/homepage3.png", description: "Best Sellers & Collections" },{ src: "/images/homepage4.png", description: "FAQ" },
+      { src: "/images/homepage5.png", description: "NewsLetter & Footer" },{ src: "/images/navbar.png", description: "Dynamic Navbar" },
+      { src: "/images/shoppage.png", description: "Product Page & Filters" },{ src: "/images/product.png", description: "Product Details" },
+      { src: "/images/review.png", description: "Reviews" },{ src: "/images/cart.png", description: "My Cart" },
+      { src: "/images/payment.png", description: "Checkout" },{ src: "/images/orders.png", description: "Profile / My Orders" },
+      { src: "/images/adress.png", description: "Profile / My Adresses" },{ src: "/images/contact.png", description: "Contact Us" },
+      { src: "/images/dashboard.png", description: "Admin Dashboard Overview & More" },{ src: "/images/dashboard2.png", description: "Orders Management" },
+      { src: "/images/dashboard3.png", description: "Products Management" },{ src: "/images/dashboard4.png", description: "Add New Product" },
+      { src: "/images/dashboard5.png", description: "Collections Management" },{ src: "/images/login.png", description: "Log-In" },
+      { src: "/images/signup.png", description: "Sign-Up" }
+    ],
   },
   {
     id: 2,
@@ -20,17 +32,30 @@ const projects = [
     description: "Collaborated in a team to build a system for managing prisoners, staff and schedules . It includes secure storage of prisoners information, real-time staff schedule updates, and role-based access controls. Coded with Node.js and features responsive UI components with React.js and Bootstrap.",
     image: "/images/urbangaze.png",
     github: "https://github.com/diellav/PrisonManager",
-    demo: "https://youtu.be/demo2",
+    techStack: ["React", "Node", "Bootstrap",  "MSSQL"],
     screenshots: ["/project2-1.png", "/project2-2.png"],
   },
   {
     id: 3,
     title: "Enchanted Day",
     description: "Worked in a team to design and code a responsive wedding planner site using HTML, CSS, JavaScript, and PHP. A website that helps couples plan their perfect wedding, from choosing a venue, buying decor and selecting their favourite menu and desired cake. ",
-    image: "/images/urbangaze.png",
+    image: "/images/enchantedhomepage.png",
     github: "https://github.com/diellav/Enchanted-Day",
-    demo: "https://youtu.be/demo3",
-    screenshots: ["/project3-1.png", "/project3-2.png", "/project3-3.png"],
+    techStack: ["HTML", "CSS", "JavaScript",  "PHP", "MySQL"],
+   screenshots: [
+    { src: "/images/enchantedhomepage.png", description: "Home Page" }, { src: "/images/enchantedhomepage2.png", description: "Details" },
+    { src: "/images/enchantedhomepage3.png", description: "Popular Venues" },{ src: "/images/enchantedhomepage4.png", description: "Guides & Blogs" },
+    { src: "/images/enchantedhomepage5.png", description: "Footer" },{ src: "/images/enchantedcity.png", description: "City Venues" },
+    { src: "/images/enchantedgarden.png", description: "Garden Venues" },{ src: "/images/enchantedvenue.png", description: "Venue Details" },
+    { src: "/images/enchantedbook.png", description: "Book Your Venue" },{ src: "/images/enchantedreview.png", description: "Venue Review" },
+    { src: "/images/enchantedcatering.png", description: "Catering Services" },{ src: "/images/enchantedcatering2.png", description: "Cakes" },
+    { src: "/images/enchantedvideo.png", description: "Video Services" },{ src: "/images/enchanteddecor.png", description: "Decor & Floral Arraignements" },
+    { src: "/images/enchanteddresses.png", description: "Bridal Dresses & More" },{ src: "/images/enchantedmeasurements.png", description: "Bridal Part Measurements" },
+    { src: "/images/enchantedcart.png", description: "My Cart" },{ src: "/images/enchantedtotal.png", description: "Update Total By Guests" },
+    { src: "/images/enchantedpay.png", description: "Checkout" },{ src: "/images/enchantedcontact.png", description: "Contact Us" },
+    { src: "/images/enchantedguide.png", description: "Guide & Tips" },{ src: "/images/enchanteddashboard.png", description: "Admin Dashboard" },
+    { src: "/images/enchantedlogin.png", description: "Log-In" },{ src: "/images/enchantedsignup.png", description: "Sign-Up" }
+  ],
   },
 ];
 
@@ -72,6 +97,16 @@ export default function Projects() {
       project.id % 2 === 0 ? "sm:-mt-6 md:-mr-30 lg:-mr-48" : "sm:-mt-6 md:-ml-30 lg:-ml-48"}`}>
               <h2 className="text-xl font-semibold mb-2 justify-self-center font-futuristic text-white text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{project.title}</h2>
               <p className="text-white lg:text-sm sm:text-xs font-mono justify-self-center leading-relaxed">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mt-3 mb-3 justify-center">
+            {project.techStack?.map((tech, idx) => (
+              <span
+                key={idx}
+                className="bg-purple-800 text-white text-xs px-2 py-1 rounded-full font-mono shadow-[0_0_5px_rgba(0,0,0,0.3)]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
               <div className="flex gap-4 justify-self-center">
                 <a
                   href={project.github}
@@ -79,13 +114,6 @@ export default function Projects() {
                   className="px-3 py-2 text-text rounded hover:underline hover:text-text font-futuristic"
                 >
                   GitHub
-                </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  className="px-3 py-2 text-text rounded hover:underline font-futuristic"
-                >
-                  Video
                 </a>
                 {project.screenshots.length > 0 && (
                   <button
@@ -126,10 +154,10 @@ export default function Projects() {
                <SwiperSlide key={i}>
                 <img
                   key={i}
-                  src={src}
+                  src={src.src}
                   alt={`Screenshot ${i + 1}`}
-                  className="rounded-lg object-cover w-[90%] justify-self-center h-64 sm:w-[90%] sm:h-64 lg:w-[85%] lg:h-82"
-                /></SwiperSlide>
+                  className="rounded-lg object-contain w-[90%] justify-self-center h-56 sm:w-[90%] sm:h-64 lg:w-[85%] lg:h-82"
+                /><p className="text-white text-center font-futuristic  text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{src.description}</p></SwiperSlide>
                 
               ))}
               </Swiper>

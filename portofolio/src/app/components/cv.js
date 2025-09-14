@@ -3,7 +3,7 @@ import React from "react";
 export default function CV() {
   return (
 <>
-<div className="bg-gradient-to-b from-[#111c37] via-[#313a80] to-[#111c37] 
+<div className="bg-gradient-to-b from-[#0b1428] via-[#202755] to-[#0b1428] 
   flex justify-around w-full h-100 items-center mt-30">
 <div className="content">
    <div className="planet ">

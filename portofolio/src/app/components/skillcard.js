@@ -1,18 +1,16 @@
 "use client";
 import React from "react";
 
-export function SkillCard({ icon: Icon, color, title }) {
+export function SkillCard({ icon: Icon, color, title, isMobile }) {
   return (
-    <div className="bg-transparent shadow-none justify-self-center">
-      <div className="p-[4px]  w-35 justify-center text-center  rounded-2xl bg-gradient-to-r from-pink-700 via-purple-600 to-blue-700
-      shadow-[0_0_15px_rgba(255,0,240,0.5)]">
-        <div className="bg-amber-100 p-2 rounded-[inherit]">
-          <Icon className="h-20 w-30 " style={{ color }} />
-          <h3 className="font-mono mt-4 text-x0 font-semibold text-slate-800">
-            {title}
-          </h3>
-        </div>
+    <div className={`flex flex-col items-center justify-center p-2 md:p-4
+     bg-white/0 backdrop-blur-sm rounded-xl border border-white/10  shadow-[0_0_5px_rgba(255,0,240,0.5)] hover:shadow-[0_0_10px_rgba(255,0,240,0.8)]">
+     ${isMobile ? 'min-w-[80px] h-[80px]' : 'min-w-[100px] h-[100px]'} transition-all duration-300
+     `}>
+      <div className={`${isMobile ? 'text-2xl' : 'text-3xl'} mb-1 md:mb-2`} style={{ color }}>
+        <Icon />
       </div>
+      <span className={`${isMobile ? 'text-xs' : 'text-sm'} font-medium font-futuristic text-white`}>{title}</span>
     </div>
   );
 }
