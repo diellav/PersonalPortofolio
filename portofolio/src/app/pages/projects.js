@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: "UrbanGaze",
-    description: "Full-stack fashion e-commerce website built during my internship using React.js and PHP Laravel. Features include product browsing, filtering, cart & wishlist, secure Stripe payments, user profiles, and an admin dashboard. Fully database-driven with a smooth and exceptional user experience.",
+    description: "A full-stack fashion e-commerce website built during my internship. Users can browse & filter products, manage their cart and wishlist, make secure purchases, maintain their profile, while the admin can overview the system from the dashboard. Fully database-driven with a smooth and exceptional user experience.",
     image: "/images/urbangaze.png",
     github: "https://github.com/diellav/FashionWebsite",
     techStack: ["React", "Laravel", "Stripe", "PHP", "MySQL"],
@@ -29,16 +29,16 @@ const projects = [
   {
     id: 2,
     title: "Prison Manager",
-    description: "Collaborated in a team to build a system for managing prisoners, staff and schedules . It includes secure storage of prisoners information, real-time staff schedule updates, and role-based access controls. Coded with Node.js and features responsive UI components with React.js and Bootstrap.",
-    image: "/images/urbangaze.png",
+    description: "Collaborated in a team to build a system for managing prisoners, staff and schedules . It includes secure storage of prisoners information, their movements, useful staff management features, real-time schedule updates, and role-based access controls.",
     github: "https://github.com/diellav/PrisonManager",
+    image: "/images/roles.png",
     techStack: ["React", "Node", "Bootstrap",  "MSSQL"],
-    screenshots: ["/project2-1.png", "/project2-2.png"],
+    screenshots: ["/project2-1.png", { src: "/images/roles.png", description: "Permissions Selection" },],
   },
   {
     id: 3,
     title: "Enchanted Day",
-    description: "Worked in a team to design and code a responsive wedding planner site using HTML, CSS, JavaScript, and PHP. A website that helps couples plan their perfect wedding, from choosing a venue, buying decor and selecting their favourite menu and desired cake. ",
+    description: "Worked in a duo-team to design and code a responsive wedding planner website that helps couples plan their perfect wedding. From selecting a venue, decor, menus and desired cake, to picking their perfect wedding atire, the bride and groom will be guaranteed that all their needs are met. ",
     image: "/images/enchantedhomepage.png",
     github: "https://github.com/diellav/Enchanted-Day",
     techStack: ["HTML", "CSS", "JavaScript",  "PHP", "MySQL"],
@@ -69,22 +69,22 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-text-mini justify-items-center w-full">
+    <div className="min-h-screen bg-text-mini justify-items-center w-full ">
       <h2 className="font-futuristic text-4xl font-bold text-accent">
     Projects
         </h2>
-      <div className="grid md:grid-cols-1 lg:gap-35 md:gap-30 sm:gap-20 gap-20 w-full mt-24">
+      <div className="grid md:grid-cols-1 lg:gap-35 md:gap-30 sm:gap-20 gap-20 w-full lg:mt-24 md:mt-24 mt-16">
         {projects.map((project) => (
           <div key={project.id} 
           className={`relative flex flex-col sm:flex-col md:flex-row lg:flex-row justify-around items-center w-full ${
       project.id % 2 === 0 ? "lg:flex-row-reverse md:flex-row-reverse" : "lg:flex-row md:flex-row"}`}>
-           <div className={`absolute -top-15 md:w-96 md:h-84 bg-purple-500 rounded-full opacity-60 blur-3xl animate-pulse z-10
+           <div className={`absolute lg:-top-15 md:-top-15 sm:-top-1 -top-1  w-96 h-1/2 sm:w-96 sm:h-96 md:w-96 md:h-84 lg:h-92 bg-purple-400 rounded-full opacity-60 blur-3xl animate-pulse z-10
             ${
-      project.id % 2 === 0 ? "right-3" : "left-3"}`}></div>
+      project.id % 2 === 0 ? "lg:right-3 md:right-3" : "lg:left-3 md:left-3"}`}></div>
           <div
-            className={ `sm:w-[80%] md:w-[40%] lg:h-72 sm:h-64 h-64 w-[80%] rounded-xs overflow-hidden z-20 ${
+            className={ `sm:w-[85%] md:w-[50%] lg:w-[40%] lg:h-72 md:h-76 sm:h-64 h-64 w-[95%] rounded-xs overflow-hidden z-20 ${
       project.id % 2 === 0 ? "shadow-[12px_-10px_4px_4px_rgba(6,12,20,0.5)] " : "shadow-[-12px_-10px_4px_4px_rgba(6,12,20,0.5)] "}`}>
-            
+
            
             <img
               src={project.image}
@@ -93,8 +93,8 @@ export default function Projects() {
             />  
 
               </div>
-            <div className={`bg-violet-400/20 backdrop-blur-md shadow-md sm:w-[95%] -mt-6 w-[95%] md:w-[50%] md:mt-0 lg:mt-0 rounded-2xl overflow-hidden p-4 relative z-30 ${
-      project.id % 2 === 0 ? "sm:-mt-6 md:-mr-30 lg:-mr-48" : "sm:-mt-6 md:-ml-30 lg:-ml-48"}`}>
+            <div className={`bg-violet-400/20 backdrop-blur-md shadow-md sm:w-[95%] -mt-4 w-[100%] md:w-[50%] md:mt-0 lg:mt-0  rounded-xl  overflow-hidden p-4 relative z-30 ${
+      project.id % 2 === 0 ? "sm:-mt-4 md:-mr-16 lg:-mr-48" : "sm:-mt-4 md:-ml-16 lg:-ml-48"}`}>
               <h2 className="text-xl font-semibold mb-2 justify-self-center font-futuristic text-white text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{project.title}</h2>
               <p className="text-white lg:text-sm sm:text-xs font-mono justify-self-center leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-3 mb-3 justify-center">
@@ -144,9 +144,9 @@ export default function Projects() {
             <Swiper
               modules={[Navigation]}
                 navigation={{
-    nextEl: '.custom-swiper-next',
-    prevEl: '.custom-swiper-prev',
-  }}
+                  nextEl: '.custom-swiper-next',
+                  prevEl: '.custom-swiper-prev',
+                }}
               slidesPerView={1}
               className="rounded-lg overflow-visible "
             >
@@ -162,7 +162,7 @@ export default function Projects() {
               ))}
               </Swiper>
               <div className="custom-swiper-prev">‹</div>
-<div className="custom-swiper-next">›</div>
+              <div className="custom-swiper-next">›</div>
             </div>
          
         </div>

@@ -11,14 +11,15 @@ const NAV_MENU = [
 
 function NavItem({ name, href, scrolled, onClick }) {
   return (
-    <li>
+    <li className="list-none">
       <a
         href={href || "#"}
-         onClick={onClick}
+        onClick={onClick}
         className={`block py-2 px-4 font-medium ${
-          scrolled? "text-purple-100 font-bold hover:text-purple-300"
-    :"text-purple-400 hover:text-purple-100"
-  }`}
+          scrolled
+            ? "text-purple-100 font-bold hover:text-purple-300"
+            : "text-purple-400 hover:text-purple-100"
+        }`}
       >
         {name}
       </a>
@@ -31,68 +32,107 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const toggleOpen = () => setOpen((cur) => !cur);
-   useEffect(() => {
+
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) setOpen(false);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 40) {
-      setScrolled(true);
-    } else {
-      setScrolled(false); 
-    }
-  };
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
+    <>
     <nav
-      className={`w-full sticky top-0 left-0 z-[9999] transition-colors duration-300 ${
-        scrolled ? "bg-purple-600/10 backdrop-blur-md shadow-md" : "bg-transparent"
+      className={`w-full sticky top-0 left-0 transition-all duration-300 ${
+        scrolled || open
+          ? "bg-purple-600/20 shadow-md"
+          : "bg-transparent"
       }`}
+      style={{ 
+        zIndex: 9999,
+        backdropFilter: (scrolled || open) ? 'blur(12px)' : 'none',
+        WebkitBackdropFilter: (scrolled || open) ? 'blur(12px)' : 'none'
+      }}
     >
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <a href="#home" className={`text-3xl font-bold text-purple-400 font-futuristic  ${
-        scrolled ? "visible" : "invisible"
-      }`}
-         onClick={()=>setOpen(false)}>
+        <a
+          href="#home"
+          className={`text-3xl font-bold text-purple-400 font-futuristic ${
+            scrolled || open ? "visible" : "invisible"
+          }`}
+          onClick={() => setOpen(false)}
+        >
           DiellaVeliu.
         </a>
 
-       
-        <ul className="hidden lg:flex gap-8 font-mono">
+        <ul className="hidden lg:flex gap-8 font-mono text-xl decoration-0">
           {NAV_MENU.map((item) => (
-            <NavItem key={item.name} name={item.name} href={item.href} scrolled={scrolled}/>
+            <NavItem
+              key={item.name}
+              name={item.name}
+              href={item.href}
+              scrolled={scrolled}
+            />
           ))}
         </ul>
 
         <button
           onClick={toggleOpen}
-          className="lg:hidden p-2 rounded-md text-white focus:outline-none "
+          className="lg:hidden p-2 rounded-md text-white focus:outline-none"
+          style={{ zIndex: 9999 }}
         >
-          {open ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+          {open ? (
+            <XMarkIcon className="h-8 w-8" />
+          ) : (
+            <Bars3Icon className="h-8 w-8" />
+          )}
         </button>
       </div>
-
+</nav>
+ {open && (
+        <div
+          className="lg:hidden fixed inset-0 z-30 bg-black/30"
+          onClick={() => setOpen(false)}
+        />
+      )}
       {open && (
-        <div className="lg:hidden bg-purple-600/20 backdrop-blur-md shadow-md font-mono">
-          <ul className="flex flex-col gap-2 px-4 py-4">
+        <div
+          className="lg:hidden fixed top-0 left-0 w-full h-screen bg-purple-600/20 shadow-2xl z-40 pt-16"
+          style={{
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)'
+          }}
+        >
+          <div className="flex flex-col font-futuristic pt-12 px-6 text-2xl gap-6 items-center decoration-0">
             {NAV_MENU.map((item) => (
-              <NavItem key={item.name} name={item.name} href={item.href} scrolled={scrolled} 
-         onClick={()=>setOpen(false)}/>
+              <NavItem
+                key={item.name}
+                name={item.name}
+                href={item.href}
+                scrolled={true}
+                onClick={() => setOpen(false)}
+              />
             ))}
-          </ul>
+          </div>
         </div>
       )}
-    </nav>
+    </>
   );
 }
