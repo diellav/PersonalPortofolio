@@ -29,11 +29,20 @@ const projects = [
   {
     id: 2,
     title: "Prison Manager",
-    description: "Collaborated in a team to build a system for managing prisoners, staff and schedules . It includes secure storage of prisoners information, their movements, useful staff management features, real-time schedule updates, and role-based access controls.",
+    description: "Collaborated in a team to build a system for managing prisoners, staff, schedules and visits . It includes secure storage of prisoners information, their movements, useful staff management features, real-time schedule updates, and role-based access controls.",
     github: "https://github.com/diellav/PrisonManager",
-    image: "/images/roles.png",
+    image: "/images/prisonerprofile.png",
     techStack: ["React", "Node", "Bootstrap",  "MSSQL"],
-    screenshots: ["/project2-1.png", { src: "/images/roles.png", description: "Permissions Selection" },],
+    screenshots: [
+      {src:"/images/prisonerprofile.png",description:"Staff Profile"}, 
+       { src: "/images/prisonerroles.png", description: "Role Management" },
+      { src: "/images/roles.png", description: "Role Permissions" },
+      { src: "/images/prisoneruser.png", description: "Staff Management" },
+    { src: "/images/prisonerprisoner.png", description: "Prisoner Add Form" },{ src: "/images/prisonerblocks.png", description: "Blocks Management" },
+    { src: "/images/prisonercell.png", description: "Cells Management" },{ src: "/images/prisonerlawyer.png", description: "Legal Matters Management" },
+    { src: "/images/prisonersalary.png", description: "Staff Salary Management" },{ src: "/images/prisonerforgot.png", description: "Forgot Password" },
+    { src: "/images/prisonervisitor.png", description: "Visitor Register Page" }
+    ],
   },
   {
     id: 3,

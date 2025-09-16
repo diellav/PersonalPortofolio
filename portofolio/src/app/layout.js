@@ -57,7 +57,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en"  className={`${exo2.variable} ${robotoMono.variable}`}>
-      <head> <link rel="icon" href="/logo.png"/></head>
+      <head><link rel="icon" href="/logo.png"/></head>
       <body>
         <Navbar></Navbar>
         {children}
