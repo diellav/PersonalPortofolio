@@ -34,11 +34,11 @@ function Contact() {
       </div>
       </div>
       <a href="#home"
-        className="block mb-8 shadow-[0_0_10px_rgba(255,0,240,0.5)] w-fit mt-8 px-4 py-3 border-2 border-purple-500 hover:border-4
-        text-white rounded-xl justify-self-center text-center
+        className="block mx-auto mb-8 shadow-[0_0_10px_rgba(255,0,240,0.5)] w-fit mt-8 px-4 py-3 border-2 border-purple-500 hover:border-4
+        text-white rounded-xl 
       transition-transform transform hover:-translate-y-1"><ArrowUpIcon className="h-6 w-6 text-text font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]"/>
       </a>
-      <p className="font-futuristic text-text justify-self-center mb-5 text-xs ">Diella Veliu @2025</p>
+      <p className="font-futuristic text-text text-center mb-5 mt-3 text-xs ">Diella Veliu @2025</p>
   </>
   );
 }

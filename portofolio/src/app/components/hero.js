@@ -9,8 +9,9 @@ function StarsBackground() {
     const ctx = canvas.getContext("2d");
     if (!canvas || !ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const parent = canvas.parentElement;
+    canvas.width = parent ? parent.clientWidth : window.innerWidth;
+    canvas.height = parent ? parent.clientHeight : window.innerHeight;
 
     const stars = [];
     for (let i = 0; i < 250; i++) {
@@ -70,10 +71,10 @@ function StarsBackground() {
 function Hero() {
   
   return (
-    <header className="p-8 overflow-hidden">
+    <header className="relative p-8 overflow-hidden">
        <StarsBackground />
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center justify-items-center lg:grid-cols-2">
-        <div className="relative typewriter  row-start-1 sm:row-start-1 md:row-start-1 lg:row-auto sm:w-[90%] text-start">
+        <div className="relative typewriter row-start-1 sm:row-start-1 md:row-start-1 lg:row-auto sm:w-[90%] text-center lg:text-left md:text-left">
                <h1 className="font-futuristic bg-gradient-to-r from-purple-700 via-purple-400 to-gray-400 mb-4 text-3xl font-bold leading-tight  bg-clip-text text-transparent lg:text-5xl">
             Hi, I'm Diella Veliu !
           </h1>
@@ -82,7 +83,7 @@ function Hero() {
               Welcome to my little corner of the internet where I share my projects, experiences and what I’m learning along the way in becoming a software developer.
           </p>
           <a href="#projects"
-            className="block shadow-[0_0_10px_rgba(255,0,240,0.5)] w-fit mt-8 px-6 py-3 border-2 
+            className="block shadow-[0_0_10px_rgba(255,0,240,0.5)] mx-auto lg:mx-0 w-fit mt-8 px-6 py-3 border-2 
              border-purple-500 hover:border-4 text-white rounded-xl font-futuristic transition-transform 
              transform hover:-translate-y-1  lg:self-start"> View Projects
           </a>

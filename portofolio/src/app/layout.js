@@ -32,11 +32,11 @@ export const metadata = {
     title: "Diella Veliu – Portfolio",
     description:
       "Explore my projects, skills, and experiences as a software developer.",
-    url: "https://your-domain.com",
+    url: "https://diellaveliu.netlify.app",
     siteName: "Diella Veliu Portfolio",
     images: [
       {
-        url: "https://your-domain.com/images/preview.png",
+        url: "https://diellaveliu.netlify.app/images/preview.png",
         width: 1200,
         height: 630,
         alt: "Diella Veliu Portfolio",
@@ -50,7 +50,7 @@ export const metadata = {
     title: "Diella Veliu – Portfolio",
     description:
       "Explore my projects, skills, and experiences as a software developer.",
-    images: ["https://your-domain.com/images/preview.png"],
+    images: ["https://diellaveliu.netlify.app/images/preview.png"],
   },
 };
 

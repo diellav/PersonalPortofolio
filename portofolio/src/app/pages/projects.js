@@ -104,8 +104,8 @@ export default function Projects() {
               </div>
             <div className={`bg-violet-400/20 backdrop-blur-md shadow-md sm:w-[95%] -mt-4 w-[100%] md:w-[50%] md:mt-0 lg:mt-0  rounded-xl  overflow-hidden p-4 relative z-30 ${
       project.id % 2 === 0 ? "sm:-mt-4 md:-mr-16 lg:-mr-48" : "sm:-mt-4 md:-ml-16 lg:-ml-48"}`}>
-              <h2 className="text-xl font-semibold mb-2 justify-self-center font-futuristic text-white text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{project.title}</h2>
-              <p className="text-white lg:text-sm sm:text-xs font-mono justify-self-center leading-relaxed">{project.description}</p>
+              <h2 className="text-xl font-semibold mb-2 text-center font-futuristic text-white text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{project.title}</h2>
+              <p className="text-white lg:text-sm sm:text-xs font-mono text-center leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-3 mb-3 justify-center">
             {project.techStack?.map((tech, idx) => (
               <span
@@ -116,7 +116,7 @@ export default function Projects() {
               </span>
             ))}
           </div>
-              <div className="flex gap-4  text-center justify-self-center">
+              <div className="flex gap-4 mt-3 w-full justify-center">
                 <a
                   href={project.github}
                   target="_blank"
