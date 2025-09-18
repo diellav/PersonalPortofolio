@@ -160,12 +160,12 @@ export default function Projects() {
               className="rounded-lg overflow-visible "
             >
            {activeProject.screenshots.map((src, i) => (
-               <SwiperSlide key={i}>
+               <SwiperSlide key={i} className="flex items-center justify-center">
                 <img
                   key={i}
                   src={src.src}
                   alt={`Screenshot ${i + 1}`}
-                  className="rounded-lg object-contain w-[90%] justify-self-center h-56 sm:w-[90%] sm:h-64 lg:w-[85%] lg:h-82"
+                  className="block mx-auto rounded-lg object-contain w-[90%] justify-self-center h-56 sm:w-[90%] sm:h-64 lg:w-[85%] lg:h-82"
                 /><p className="text-white text-center font-futuristic  text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{src.description}</p></SwiperSlide>
                 
               ))}
