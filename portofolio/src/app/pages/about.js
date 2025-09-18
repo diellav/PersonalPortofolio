@@ -99,7 +99,7 @@ Outside of classes, I spend a lot of time experimenting with new tools and try t
       </div>
 
       <div className="relative w-full overflow-hidden py-6">
-          <p className="justify-self-center mb-8 font-futuristic font-bold text-accent text-xl">MY SKILLS</p>
+          <p className="justify-self-center mb-8 font-futuristic font-bold text-accent  text-center text-xl">MY SKILLS</p>
            <div className={`absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 ${isMobile ? "w-5" : "w-20"}`}/>
         <div className={`absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 ${isMobile ? "w-5" : "w-20"}`} />
         <motion.div

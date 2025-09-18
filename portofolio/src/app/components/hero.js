@@ -73,7 +73,7 @@ function Hero() {
     <header className="p-8 overflow-hidden">
        <StarsBackground />
       <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center justify-items-center lg:grid-cols-2">
-        <div className="relative typewriter  row-start-1 sm:row-start-1 md:row-start-1 lg:row-auto sm:w-[90%]">
+        <div className="relative typewriter  row-start-1 sm:row-start-1 md:row-start-1 lg:row-auto sm:w-[90%] text-start">
                <h1 className="font-futuristic bg-gradient-to-r from-purple-700 via-purple-400 to-gray-400 mb-4 text-3xl font-bold leading-tight  bg-clip-text text-transparent lg:text-5xl">
             Hi, I'm Diella Veliu !
           </h1>

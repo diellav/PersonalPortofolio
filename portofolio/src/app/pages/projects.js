@@ -79,7 +79,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-text-mini justify-items-center w-full ">
-      <h2 className="font-futuristic text-4xl font-bold text-accent">
+      <h2 className="font-futuristic  text-center text-2xl lg:text-4xl  font-bold text-accent">
     Projects
         </h2>
       <div className="grid md:grid-cols-1 lg:gap-35 md:gap-30 sm:gap-20 gap-20 w-full lg:mt-24 md:mt-24 mt-16">
@@ -116,7 +116,7 @@ export default function Projects() {
               </span>
             ))}
           </div>
-              <div className="flex gap-4 justify-self-center">
+              <div className="flex gap-4  text-center justify-self-center">
                 <a
                   href={project.github}
                   target="_blank"
