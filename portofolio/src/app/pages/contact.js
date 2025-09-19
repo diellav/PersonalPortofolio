@@ -14,9 +14,9 @@ function Contact() {
             Contact
           </h1>
           <div className="flex lg:flex-row md:flex-row sm:flex-col flex-col gap-16 lg:gap-0 md:gap-10 justify-around p-6 lg:mt-8 md:m-8 mt-1">
-          <div className="w-full lg:w-[40%] md:w-[80%] sm:w-[99%] flex items-center text-center"><h4 className="leading-loose text-text items-center text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
+          <div className="w-full lg:w-[40%]  md:w-1/2 sm:w-[99%] flex items-center text-center"><h4 className="leading-loose text-text items-center text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
             If you have any project in mind for collaborating or have a question, I'd be happy to connect!</h4></div>
-          <div className="w-[99%] sm:[99%] md:[90%] lg:w-[40%] space-y-6 justify-self-center">
+          <div className="w-[99%] sm:[99%] md:w-1/2 lg:w-[40%] space-y-6 justify-center items-center">
           <h4 className="flex flex-row items-center gap-x-5 text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
             <HiOutlineMail className="h-5 w-5 text-text" />{" "}
             <a
