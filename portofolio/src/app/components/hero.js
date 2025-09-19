@@ -83,7 +83,7 @@ function Hero() {
               Welcome to my little corner of the internet where I share my projects, experiences and what I’m learning along the way in becoming a software developer.
           </p>
           <a href="#projects"
-            className="block shadow-[0_0_10px_rgba(255,0,240,0.5)] mx-auto lg:mx-0 w-fit mt-8 px-6 py-3 border-2 
+            className="block projects shadow-[0_0_10px_rgba(255,0,240,0.5)] mx-auto lg:mx-0 w-fit mt-8 px-6 py-3 border-2 
              border-purple-500 hover:border-4 text-white rounded-xl font-futuristic transition-transform 
              transform hover:-translate-y-1  lg:self-start"> View Projects
           </a>

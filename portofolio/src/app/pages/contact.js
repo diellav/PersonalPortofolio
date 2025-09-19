@@ -9,15 +9,15 @@ function Contact() {
 
 <>
       <div className="container mx-auto flex h-full flex-col min-h-[40vh] w-full items-center justify-items-center">
-        <div className="flex flex-col space-y-3 p-6  mt-8" >
+        <div className="flex flex-col space-y-3 p-0  mt-8" >
           <h1 className="font-futuristic text-accent mb-4 text-3xl font-bold lg:text-4xl text-center">
             Contact
           </h1>
           <div className="flex lg:flex-row md:flex-col sm:flex-col flex-col gap-16 lg:gap-0 justify-around p-6 lg:mt-8 md:m-8 mt-1 items-center">
-          <div className="w-full lg:w-[40%] md:w-[99%] sm:w-[99%] flex items-center text-center"><h4 className="leading-loose text-text items-center text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
+          <div className="w-full lg:w-[40%] md:w-[99%] sm:w-[99%] flex items-center text-center"><h4 className="leading-loose text-text items-center lg:text-xl text-base font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
             If you have any project in mind for collaborating or have a question, I'd be happy to connect!</h4></div>
-          <div className="w-[99%] sm:[99%] md:w-[99%] lg:w-[40%] space-y-6 justify-center items-center">
-          <h4 className="flex flex-row items-center gap-x-5 text-text text-lg lg:text-xl  font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
+          <div className="w-[99%] sm:w-[99%] md:w-[99%] lg:w-[40%] space-y-6 justify-center items-center">
+          <h4 className="flex flex-row items-center gap-x-5 text-text text-base lg:text-xl  font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">
             <HiOutlineMail className="h-5 w-5 text-text" />{" "}
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=diellaveliu@gmail.com"
@@ -25,9 +25,9 @@ function Contact() {
                target="_blank"
                rel="noopener noreferrer">
               diellaveliu@gmail.com</a></h4>
-          <h4 className="flex flex-row items-center gap-x-5 text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]"> <FaLinkedin className="h-5 w-5 text-text" /> {" "}<a  href="https://linkedin.com/in/diella-veliu"
+          <h4 className="flex flex-row items-center gap-x-5 text-text text-base lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]"> <FaLinkedin className="h-5 w-5 text-text" /> {" "}<a  href="https://linkedin.com/in/diella-veliu"
               className="hover:underline"  target="_blank"   rel="noopener noreferrer">linkedin.com/in/diella-veliu</a></h4>
-          <h4 className="flex flex-row items-center gap-x-5 text-text text-lg lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]"><FaGithub className="h-5 w-5 text-text" /> {" "}<a  href="https://github.com/diellav"
+          <h4 className="flex flex-row items-center gap-x-5 text-text text-base lg:text-xl font-mono text-shadow-[0_0_10px_rgba(0,120,255,0.5)]"><FaGithub className="h-5 w-5 text-text" /> {" "}<a  href="https://github.com/diellav"
               className="hover:underline"  target="_blank"   rel="noopener noreferrer">diellav</a></h4>
         </div>
       </div>

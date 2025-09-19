@@ -79,7 +79,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen bg-text-mini justify-items-center w-full ">
-      <h2 className="font-futuristic  text-center text-2xl lg:text-4xl  font-bold text-accent">
+      <h2 className="font-futuristic  text-center text-3xl lg:text-4xl  font-bold text-accent">
     Projects
         </h2>
       <div className="grid md:grid-cols-1 lg:gap-35 md:gap-30 sm:gap-20 gap-20 w-full lg:mt-24 md:mt-24 mt-16">
@@ -87,7 +87,7 @@ export default function Projects() {
           <div key={project.id} 
           className={`relative flex flex-col sm:flex-col md:flex-row lg:flex-row justify-around items-center w-full ${
       project.id % 2 === 0 ? "lg:flex-row-reverse md:flex-row-reverse" : "lg:flex-row md:flex-row"}`}>
-           <div className={`absolute lg:-top-15 md:-top-15 sm:-top-1 -top-1  w-96 h-1/2 sm:w-96 sm:h-96 md:w-96 md:h-84 lg:h-92 bg-purple-400 rounded-full opacity-60 blur-3xl animate-pulse z-10
+           <div className={`absolute lg:-top-15 md:-top-15 sm:-top-1 -top-1  w-full h-1/2 sm:w-96 sm:h-96 md:w-96 md:h-84 lg:h-92 bg-purple-400 rounded-full opacity-60 blur-3xl animate-pulse z-10
             ${
       project.id % 2 === 0 ? "lg:right-3 md:right-3" : "lg:left-3 md:left-3"}`}></div>
           <div
@@ -102,10 +102,10 @@ export default function Projects() {
             />  
 
               </div>
-            <div className={`bg-violet-400/20 backdrop-blur-md shadow-md sm:w-[95%] -mt-4 w-[100%] md:w-[50%] md:mt-0 lg:mt-0  rounded-xl  overflow-hidden p-4 relative z-30 ${
+            <div className={`bg-violet-400/20 backdrop-blur-md shadow-md sm:w-[95%] -mt-4 w-[100%] md:w-[50%] md:mt-0 lg:mt-0  rounded-xl  overflow-hidden max-[330px]:p-2 p-4 sm:p-4 md:p-4 lg:p-4 relative z-30 ${
       project.id % 2 === 0 ? "sm:-mt-4 md:-mr-16 lg:-mr-48" : "sm:-mt-4 md:-ml-16 lg:-ml-48"}`}>
               <h2 className="text-xl font-semibold mb-2 text-center font-futuristic text-white text-shadow-[0_0_10px_rgba(0,120,255,0.5)]">{project.title}</h2>
-              <p className="text-white lg:text-sm sm:text-xs font-mono text-center leading-relaxed">{project.description}</p>
+              <p className="text-white lg:text-sm sm:text-xs text-xs font-mono text-center leading-relaxed">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-3 mb-3 justify-center">
             {project.techStack?.map((tech, idx) => (
               <span

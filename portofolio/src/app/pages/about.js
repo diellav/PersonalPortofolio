@@ -65,12 +65,11 @@ export function About() {
   return (
     <section ref={containerRef} className="px-2 mt-20">
       <div className="container mx-auto mb-20 text-center">
-        <h2 className="font-futuristic mb-4 text-4xl font-bold text-accent">About Me</h2>
-  <p className=" font-mono leading-loose mx-auto w-full text-text text-shadow-[0_0_5px_rgba(0,120,255,0.5)] lg:w-10/12 lg:text-lg sm:text-base text-base">
-      I’m a <span className="text-gray-200">Computer Science and Engineering</span> student from Prishtina, and
-  I started this journey by building small and simple projects for my college courses, and over time that turned into a passion to <span className="text-gray-200">dive deeper into the expansive world that is web development and software engineering</span>. 
-  Turning simple ideas into something real and functional is the main reason why I enjoy being part of this field.
-Outside of classes, I spend a lot of time experimenting with new tools and try to keep up with new tech trends, while also collaborating with others to further improve my skills. 
+        <h2 className="font-futuristic mb-4 text-3xl lg:text-4xl md:text-3xl font-bold text-accent">About Me</h2>
+  <p className=" font-mono leading-loose mx-auto w-full text-text text-shadow-[0_0_5px_rgba(0,120,255,0.5)] lg:w-10/12 lg:text-lg sm:text-base text-base max-[360px]:text-xs">
+      I’m a <span className="text-gray-200">Computer Science and Engineering</span> student from Prishtina who
+  started this journey with small and simple class projects that grew into a passion for <span className="text-gray-200">web development and software engineering</span>. 
+I love turning simple ideas into real, useful things, and I try to stay on top of the latest tech trends to keep improving my skills.
 </p>
 <br></br>
 <br></br>
@@ -100,8 +99,8 @@ Outside of classes, I spend a lot of time experimenting with new tools and try t
 
       <div className="relative w-full overflow-hidden py-6">
           <p className="justify-self-center mb-8 font-futuristic font-bold text-accent  text-center text-xl">MY SKILLS</p>
-           <div className={`absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 ${isMobile ? "w-5" : "w-20"}`}/>
-        <div className={`absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 ${isMobile ? "w-5" : "w-20"}`} />
+           <div className={`absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10 ${isMobile ? "w-2" : "w-20"}`}/>
+        <div className={`absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10 ${isMobile ? "w-2" : "w-20"}`} />
         <motion.div
           ref={firstRowRef}
           className="flex gap-8"

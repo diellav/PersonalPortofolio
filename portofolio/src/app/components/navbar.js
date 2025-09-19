@@ -120,7 +120,7 @@ export default function Navbar() {
             WebkitBackdropFilter: 'blur(12px)'
           }}
         >
-          <div className="flex flex-col font-futuristic pt-12 px-6 text-2xl gap-6 items-center decoration-0">
+          <div className="flex flex-col font-futuristic pt-12 px-0 text-2xl gap-6 items-center decoration-0">
             {NAV_MENU.map((item) => (
               <NavItem
                 key={item.name}
