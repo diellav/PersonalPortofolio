@@ -69,7 +69,7 @@ export function About() {
   <p className=" font-mono leading-loose mx-auto w-full text-text text-shadow-[0_0_5px_rgba(0,120,255,0.5)] lg:w-10/12 lg:text-lg sm:text-base text-base">
       I’m a <span className="text-gray-200">Computer Science and Engineering</span> student from Prishtina, and
   I started this journey by building small and simple projects for my college courses, and over time that turned into a passion to <span className="text-gray-200">dive deeper into the expansive world that is web development and software engineering</span>. 
-  Turning simple ideas into something real and functional so that people can use and enjoy is the main reason why I enjoy being part of this field.
+  Turning simple ideas into something real and functional is the main reason why I enjoy being part of this field.
 Outside of classes, I spend a lot of time experimenting with new tools and try to keep up with new tech trends, while also collaborating with others to further improve my skills. 
 </p>
 <br></br>

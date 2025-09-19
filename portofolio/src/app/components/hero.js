@@ -73,13 +73,13 @@ function Hero() {
   return (
     <header className="relative p-8 overflow-hidden">
        <StarsBackground />
-      <div className="container mx-auto grid h-full gap-10 min-h-[60vh] w-full grid-cols-1 items-center justify-items-center lg:grid-cols-2">
-        <div className="relative typewriter row-start-1 sm:row-start-1 md:row-start-1 lg:row-auto sm:w-[90%] text-center lg:text-left md:text-left">
+      <div className="mx-auto grid h-full max-w-screen-xl gap-10 min-h-[60vh] w-full grid-cols-1 items-center justify-items-center lg:grid-cols-2">
+        <div className="relative typewriter row-start-1 sm:row-start-1 md:row-start-1 lg:row-auto w-full text-center lg:text-left md:text-center max-w-[28rem] lg:max-w-none">
                <h1 className="font-futuristic bg-gradient-to-r from-purple-700 via-purple-400 to-gray-400 mb-4 text-3xl font-bold leading-tight  bg-clip-text text-transparent lg:text-5xl">
             Hi, I'm Diella Veliu !
           </h1>
 
-          <p className="type font-mono mb-4 leading-loose text-lg text-text md:pr-16 xl:pr-28 text-shadow-[0_0_5px_rgba(0,120,255,0.5)]">
+          <p className="type font-mono mb-4 leading-loose text-lg text-text lg:pr-16 xl:pr-28 pr-0 sm:pr-0 text-shadow-[0_0_5px_rgba(0,120,255,0.5)]">
               Welcome to my little corner of the internet where I share my projects, experiences and what I’m learning along the way in becoming a software developer.
           </p>
           <a href="#projects"
@@ -93,11 +93,8 @@ function Hero() {
   height={1024}
   alt="team work"
   src="/images/headshotPortofolio.png"
-  className="row-start-2 sm:row-start-2 md:row-start-2 lg:row-auto w-full
-    md:w-[20rem] md:h-[20rem] 
-    lg:w-[22rem] lg:h-[25rem] 
-  rounded-xl object-cover justify-self-center
-custom-img shadow-[0_0_10px_rgba(0,120,255,0.5)]"
+  className="row-start-2 lg:row-auto mx-auto rounded-xl object-cover shadow-[0_0_10px_rgba(0,120,255,0.5)]
+                     w-64 sm:w-72 md:w-80 md:h-80 lg:w-[22rem] lg:h-[25rem]"
 />
 
 </div>
