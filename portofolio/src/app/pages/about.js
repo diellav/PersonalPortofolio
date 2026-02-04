@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { SiHtml5, SiCss3, SiReact, SiJavascript, SiTailwindcss, SiGit, SiLaravel, SiPhpmyadmin, SiMysql, SiNodedotjs } from "react-icons/si";
+import { SiHtml5, SiCss3, SiReact, SiJavascript, SiTailwindcss, SiGit, SiLaravel, SiPhpmyadmin, SiMysql, SiNodedotjs , SiWordpress } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 import { SkillCard } from "@/app/components/skillcard";
 
@@ -17,6 +17,7 @@ const SKILLS = [
   { icon: SiPhpmyadmin, color: "#003545", title: "phpMyAdmin" },
   { icon: SiMysql, color: "#4479A1", title: "SQL" },
   { icon: SiNodedotjs, color: "#339933", title: "Node.js" },
+  { icon: SiWordpress, color: "#21759B", title: "WordPress" },
 ];
 
 export function About() {
@@ -92,6 +93,11 @@ I love turning simple ideas into real, useful things, and I try to stay on top o
      <li>
       <p className="text-mini lg:text-lg sm:text-base text-base text-gray-200">C# Programming & SQL Databases Course @ Prishtina REA (2024)</p>
         <p className="text-base lg:text-base md:text-base hover:underline inline-block cursor-pointer w-fit z-30" onClick={()=>window.open('/C.pdf','_blank')}>View Certification</p>
+    </li>
+     <br></br>
+     <li>
+      <p className="text-mini lg:text-lg sm:text-base text-base text-gray-200">Wordpress Development @ Tectigon Academy (2025)</p>
+        <p className="text-base lg:text-base md:text-base hover:underline inline-block cursor-pointer w-fit z-30" onClick={()=>window.open('tectigon2.pdf','_blank')}>View Certification</p>
     </li>
   </ul>
 </div>
