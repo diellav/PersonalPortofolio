@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Portfolio
 
-## Getting Started
+A responsive personal portfolio website built to showcase my projects, skills, education, and contact information. It gives recruiters and visitors a quick way to learn about my work as a Computer Science and Engineering student. The project is built with Next.js, React, Tailwind CSS, and animation/UI libraries for a modern interactive experience.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Responsive landing page with hero section
+- About section with education and certifications
+- Animated skills section
+- Project showcase with screenshots and GitHub links
+- Contact section with email, LinkedIn, and GitHub links
+- Downloadable/viewable CV and certificates
+
+## Tech Stack
+
+**Frontend:** Next.js, React, JavaScript, Tailwind CSS  
+**Backend:** Not included in this repository  
+**Database:** Not included in this repository  
+**Tools/APIs:** Framer Motion, Swiper, React Icons, Font Awesome, Heroicons
+
+## Project Structure
+
+```text
+src/app/              Main Next.js app pages and global styles
+src/app/components/   Reusable UI components
+src/app/pages/        Portfolio sections such as About, Projects, and Contact
+public/               Images, CV files, certificates, and project media
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Demo
+[Portfolio Website](https://diellaveliu.netlify.app/)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visitors can browse the homepage, view personal information, explore featured projects, open project screenshots, and use the contact links to connect. The portfolio is mainly designed as a public GitHub and recruiter-facing project showcase.
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+## What I Learned
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+While building this portfolio, I practiced creating a responsive Next.js interface, organizing reusable React components, working with Tailwind CSS, adding animations, and presenting projects in a clean and user-friendly way.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Future Improvements
 
-## Deploy on Vercel
+- Add a live demo link after deployment
+- Improve accessibility and keyboard navigation
+- Add a working contact form
+- Add more project case studies
+- Optimize images for faster loading
+- Add dark/light theme support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Diella Veliu

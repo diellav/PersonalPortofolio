@@ -80,7 +80,7 @@ function Hero() {
           </h1>
 
           <p className="type font-mono mb-4 leading-loose text-lg text-text lg:pr-16 xl:pr-28 pr-0 sm:pr-0 text-shadow-[0_0_5px_rgba(0,120,255,0.5)]">
-              Welcome to my little corner of the internet where I share my projects, experiences and what I’m learning along the way in becoming a software developer.
+              Welcome to my little corner of the internet where I share my projects, experiences and what I’m learning along the way in becoming a software developer with a growing interest in AI and Machine Learning.
           </p>
           <a href="#projects"
             className="block projects shadow-[0_0_10px_rgba(255,0,240,0.5)] mx-auto lg:mx-0 w-fit mt-8 px-6 py-3 border-2 

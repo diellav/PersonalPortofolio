@@ -67,10 +67,11 @@ export function About() {
     <section ref={containerRef} className="px-2 mt-20">
       <div className="container mx-auto mb-20 text-center">
         <h2 className="font-futuristic mb-4 text-3xl lg:text-4xl md:text-3xl font-bold text-accent">About Me</h2>
-  <p className=" font-mono leading-loose mx-auto w-full text-text text-shadow-[0_0_5px_rgba(0,120,255,0.5)] lg:w-10/12 lg:text-lg sm:text-base text-base max-[360px]:text-xs">
-      I’m a <span className="text-gray-200">Computer Science and Engineering</span> student from Prishtina who
+<p className=" font-mono leading-loose mx-auto w-full text-text text-shadow-[0_0_5px_rgba(0,120,255,0.5)] lg:w-10/12 lg:text-lg sm:text-base text-base max-[360px]:text-xs">
+  I’m a <span className="text-gray-200">Computer Science and Engineering</span> student from Prishtina who
   started this journey with small and simple class projects that grew into a passion for <span className="text-gray-200">web development and software engineering</span>. 
-I love turning simple ideas into real, useful things, and I try to stay on top of the latest tech trends to keep improving my skills.
+  I love turning ideas into real, useful applications, and recently I’ve also been exploring <span className="text-gray-200">Artificial Intelligence and Machine Learning</span> through hands-on projects and continuous learning. 
+  I enjoy staying up to date with new technologies and constantly improving my skills.
 </p>
 <br></br>
 <br></br>
@@ -89,15 +90,14 @@ I love turning simple ideas into real, useful things, and I try to stay on top o
       <p className="text-mini lg:text-lg sm:text-base text-base text-gray-200">Full Stack Development Internship @ Tectigon Academy (2025)</p>
         <p className="text-base lg:text-base md:text-base hover:underline inline-block cursor-pointer w-fit z-30" onClick={()=>window.open('/Tectigon.pdf','_blank')}>View Certification</p>
     </li>
-    <br></br>
-     <li>
-      <p className="text-mini lg:text-lg sm:text-base text-base text-gray-200">C# Programming & SQL Databases Course @ Prishtina REA (2024)</p>
-        <p className="text-base lg:text-base md:text-base hover:underline inline-block cursor-pointer w-fit z-30" onClick={()=>window.open('/C.pdf','_blank')}>View Certification</p>
-    </li>
      <br></br>
      <li>
       <p className="text-mini lg:text-lg sm:text-base text-base text-gray-200">Wordpress Development @ Tectigon Academy (2025)</p>
         <p className="text-base lg:text-base md:text-base hover:underline inline-block cursor-pointer w-fit z-30" onClick={()=>window.open('tectigon2.pdf','_blank')}>View Certification</p>
+    </li>
+     <li>
+      <br></br>
+      <p className="text-mini lg:text-lg sm:text-base text-base text-gray-200">AI, Machine Learning & Cloud Computing - developHer @ ICK (Feb 2026 - Present)</p>
     </li>
   </ul>
 </div>
