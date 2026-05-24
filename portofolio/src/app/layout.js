@@ -12,6 +12,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
+  verification:{
+    google: "D_twC3Uc9nVtSG7rkl6_diFEx2kdDdluyGwYTqt3DlY"
+  },
   metadataBase: new URL("https://diellaveliu.netlify.app"),
 
   title: "Diella Veliu – Portfolio",
