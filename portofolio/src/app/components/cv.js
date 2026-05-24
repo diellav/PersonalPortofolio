@@ -14,7 +14,7 @@ export default function CV() {
         </p>
     </div>
     <div>
-      <button type="button" className="btn shadow-[0_0_15px_rgba(255,0,240,0.5)] text-sm md:text-lg lg:text-lg"onClick={()=>window.open('/DiellaVeliuCV.pdf','_blank')}>
+      <button type="button" className="btn shadow-[0_0_15px_rgba(255,0,240,0.5)] text-sm md:text-lg lg:text-lg"onClick={()=>window.open('/DiellaVeliuCV_new.pdf','_blank')}>
       <strong className="font-futuristic">View CV</strong>
       <div id="container-stars">
         <div id="stars"></div>
